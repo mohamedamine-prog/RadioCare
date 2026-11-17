@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-11-20",
+    "heureDebut": "09:30",
+    "dureeMinutes": 45,
+    "idPatient": "09876543",
+    "idMedecin": "MED01",
+    "idManip": "MAN01",
+    "idSalle": "S01",
+    "idExamen": "EX01",
+    "statut": "PLANIFIE",
+    "id": "RDV01"
+  }
+]

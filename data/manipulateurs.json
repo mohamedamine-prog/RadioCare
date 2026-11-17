@@ -1,0 +1,11 @@
+[
+  {
+    "habilitations": "IRM,SCANNER",
+    "tarifHoraire": 12.5,
+    "disponible": true,
+    "cin": "07654321",
+    "nom": "Gharbi",
+    "prenom": "Nour",
+    "id": "MAN01"
+  }
+]

@@ -24,6 +24,25 @@ public class RendezVous extends Objet {
         this.statut = statut;
     }
 
+    // heure "09:30" -> minutes depuis minuit (570)
+    public int getDebutEnMinutes() {
+        String[] morceaux = heureDebut.split(":");
+        return Integer.parseInt(morceaux[0]) * 60 + Integer.parseInt(morceaux[1]);
+    }
+
+    public int getFinEnMinutes() {
+        return getDebutEnMinutes() + dureeMinutes;
+    }
+
+    // vrai si les deux rendez-vous sont le meme jour et que leurs horaires se chevauchent
+    public boolean chevauche(RendezVous autre) {
+        if (!date.equals(autre.getDate())) {
+            return false;
+        }
+        return getDebutEnMinutes() < autre.getFinEnMinutes()
+                && autre.getDebutEnMinutes() < getFinEnMinutes();
+    }
+
     public String getDate() { return date; }
     public void setDate(String date) { this.date = date; }
     public String getHeureDebut() { return heureDebut; }
